@@ -1,0 +1,11 @@
+env: dev
+
+server:
+  port: 8080
+  read_timeout: 5s
+  write_timeout: 5s
+
+db:
+ dsn: "postgres://app:secret@localhost:5432/appdb?sslmode=disable"
+ max_idle: 10
+ max_open: 100

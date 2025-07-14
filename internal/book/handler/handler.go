@@ -16,9 +16,9 @@ func New(s service.Service) *Handler {
 }
 
 func (h *Handler) Register(rg *gin.RouterGroup) {
-	rg.POST("/books", h.create)
-	rg.GET("/books/:id", h.findByID)
-	rg.GET("/books", h.findAll)
+	rg.POST("", h.create)
+	rg.GET("/:id", h.findByID)
+	rg.GET("", h.findAll)
 }
 
 func (h *Handler) create(c *gin.Context) {
